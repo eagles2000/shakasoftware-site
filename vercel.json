@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/apps", "destination": "/#workshop", "permanent": true },
+    { "source": "/apps/:path*", "destination": "/#workshop", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/img/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
+  ]
+}
