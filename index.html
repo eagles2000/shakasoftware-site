@@ -275,6 +275,8 @@ footer .about{margin-top:14px;max-width:44ch}
 .flags{display:flex;align-items:center;gap:8px;margin-top:16px;color:var(--night-ink)}
 .legal{border-top:1px solid rgba(255,255,255,.1)}
 .legal .wrap{padding-block:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px}
+/* Fraunces places the macron of ō over the preceding letter, so draw it in CSS */
+.kh{position:relative;display:inline-block}.kh::after{content:"";position:absolute;left:14%;right:14%;top:.36em;height:.06em;background:currentColor;border-radius:1px}
 </style>
 </head>
 <body>
@@ -387,7 +389,7 @@ footer .about{margin-top:14px;max-width:44ch}
         </div>
         <div class="copy">
           <span class="status"><span class="dot"></span>Live · New</span>
-          <h3>Crypto Kōkua</h3>
+          <h3 aria-label="Crypto Kōkua">Crypto K<span class="kh" aria-hidden="true">o</span>kua</h3>
           <p class="domain">cryptokokua.com</p>
           <p class="say">Crypto made clear for beginners. Plain-English lessons on wallets, recovery phrases, exchanges, debit cards, taxes, borrowing and crypto in a Roth IRA, with live prices and the latest crypto news.</p>
           <ul class="ticks">
